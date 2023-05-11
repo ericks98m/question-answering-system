@@ -22,6 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-8n0=np5!2rb(7kt(!p47^5ztggyosnmd$_wdqo0uhes5@pdb8-'
 
+# API KEY OPEN AI: API KEY  allows consuming Open AI services.
+API_KEY_OPEN_AI = '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'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 

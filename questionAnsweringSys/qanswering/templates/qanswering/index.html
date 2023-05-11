@@ -1,11 +1,36 @@
-<form action="{% url 'qansweringApp:qaimprovado' %}" method ="post">
-    {% csrf_token %}
-    <fieldset>
-        <legend><h1>"What would you like to know about Improvado?"</h1></legend>
-        <input type="text" 
-               name="questionUser" 
-               placeholder = "Let us know your concerns about our services.">
-        <input type="submit" value="Submit">
 
-    </fieldset>
-</form>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'qanswering/css/resets.css' %}">
+    <link rel="stylesheet" href="{% static 'qanswering/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'qanswering/css/index.css' %}">
+    <title>QAnswering</title>
+</head>
+<body>
+    <header>
+        <legend><h1>"What would you like to know about Improvado?"</h1></legend>
+    </header>
+    <main>
+        <form action="{% url 'qansweringApp:qaimprovado' %}" method ="post">
+            {% csrf_token %}
+            <fieldset>
+                <input type="text" 
+                           name="questionUser" 
+                           placeholder = "Let us know your concerns about our services.">
+            </fieldset>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <footer>
+        <a href="https://improvado.io/"> Visit us at improvado.io</a>
+    </footer> 
+</body>
+</html>
+
+
+

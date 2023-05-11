@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'qanswering/css/resets.css' %}">
+    <link rel="stylesheet" href="{% static 'qanswering/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'qanswering/css/index.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        {% if user_question %}
+            <h1> {{user_question}} </h1> 
+        {% else %}
+            <h1> About Improvado </h1> 
+        {% endif %}
+
+    </header>
+    <main>
+        {% if answer_AI %}
+            <p class="sophisticated-paragraph"> {{answer_AI}} </p> 
+        {% else %}
+            <p class="sophisticated-paragraph">The answer to this question is not available. Please visit our website for more information.</p>
+        {% endif %}
+    </main>
+    
+</body>
+</html>
