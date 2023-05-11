@@ -1,0 +1,11 @@
+<form action="{% url 'qansweringApp:qaimprovado' %}" method ="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend><h1>"What would you like to know about Improvado?"</h1></legend>
+        <input type="text" 
+               name="questionUser" 
+               placeholder = "Let us know your concerns about our services.">
+        <input type="submit" value="Submit">
+
+    </fieldset>
+</form>
